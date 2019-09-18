@@ -81,7 +81,6 @@ public class Triangle {
     {
         double A;
         double B;
-        double C;
         int choice;
         Scanner keyboard = new Scanner(System.in);
         System.out.println(" 1 - Area \n 2 - Perimeter ");
@@ -90,19 +89,37 @@ public class Triangle {
         {
             System.out.println(" Enter the A value for an equilateral triangle. >>>");
             A = keyboard.nextDouble();
-            solveEquilateralMathA(A);
+            System.out.println(" Enter the B value for an equilateral triangle. >>>");
+            B = keyboard.nextDouble();
+            solveIsoscelesMathA(A,B);
         }
         else if(choice == 2)
         {
             System.out.println(" Enter the A value for an equilateral triangle. >>>");
             A = keyboard.nextDouble();
-            solveEquilateralMathP(A);
+            System.out.println(" Enter the B value for an equilateral triangle. >>>");
+            B = keyboard.nextDouble();
+            solveIsoscelesMathP(A,B);
         }
 
-        System.out.println(" Enter the A value for an equilateral triangle. >>>");
-        A = keyboard.nextDouble();
-        solveEquilateralMathA(A);
 
+    }
+    public static void solveIsoscelesMathA(double A, double B){
+        double height;
+        double base;
+        double area;
+
+        height = 2 * (A/B);
+        base = 2 * (A/height);
+        area = (base*height/ 2);
+        System.out.println(" The area is " + area);
+
+    }
+    public static void solveIsoscelesMathP(double A, double B)
+    {
+        double perimeter;
+        perimeter = (2*A) + B;
+        System.out.println(" The perimeter is " + perimeter);
 
     }
     public static void solveEquilateral()
