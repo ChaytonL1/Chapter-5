@@ -31,7 +31,7 @@ public class RockPaperScissors {
         }
         else if (gen == 3)
         {
-            
+
         }
 
     }
